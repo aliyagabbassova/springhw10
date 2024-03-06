@@ -1,6 +1,7 @@
 package ru.gb.springhw6.model;
 import jakarta.persistence.*;
 import lombok.Data;
+
 import java.time.LocalDateTime;
 
 @Data
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 @Table(name = "notes")
 
 public class Note {
+
 //ID (автоинкрементное)(тип - Long)
 //- Заголовок (не может быть пустым)(тип - String)
 //- Содержимое (не может быть пустым)(тип - String)
@@ -15,7 +17,7 @@ public class Note {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-     private Long ID;
+    private long ID;
     @Column (nullable = false)
     private String title;
     @Column (nullable = false)
